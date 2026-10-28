@@ -98,9 +98,9 @@ async function main() {
   await mongoose.connect(dbUrl);
 }
 
-// app.get("/",(req,res)=>{
-//     res.send("Hi, I am Root");
-// })
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 
 app.use("/listings",listings);
